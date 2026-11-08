@@ -1,1 +1,251 @@
-<!doctype html><title>Andrea Dugarte</title><p>Coming soon.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrea Dugarte, AI Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a finance memo. One finding on top, the evidence under it, the method last. */
+:root{
+  --paper:#f5f7f9; --card:#ffffff; --ink:#111b24; --muted:#586674; --rule:#d5dce2;
+  --sea:#0a6a8a; --sea-soft:#dcedf3; --loss:#b23a2a; --loss-soft:#f6e0dc; --gain:#1f7a4d;
+  --display:'IBM Plex Serif',Georgia,serif; --body:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e151b; --card:#16202a; --ink:#e8eef2; --muted:#9aa9b5; --rule:#2a3845;
+    --sea:#5bb7d4; --sea-soft:#14303b; --loss:#ee8b79; --loss-soft:#3a1f1b; --gain:#6fcf9d; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e151b; --card:#16202a; --ink:#e8eef2; --muted:#9aa9b5; --rule:#2a3845;
+  --sea:#5bb7d4; --sea-soft:#14303b; --loss:#ee8b79; --loss-soft:#3a1f1b; --gain:#6fcf9d; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--rule);background:var(--card)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.name{font:600 15px var(--body);letter-spacing:.02em}
+.name span{color:var(--muted);font-weight:400}
+nav{display:flex;gap:18px;font-size:14px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover,nav a:focus-visible{color:var(--sea);text-decoration:underline}
+a{color:var(--sea)}
+a:focus-visible,input:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+h1{font:600 clamp(28px,5vw,42px)/1.15 var(--display);margin:40px 0 14px;text-wrap:balance;letter-spacing:-.01em}
+h2{font:600 24px/1.25 var(--display);margin:0 0 6px;text-wrap:balance}
+h3{font:600 16px var(--body);margin:0 0 4px}
+.lede{font-size:19px;color:var(--ink);max-width:62ch;margin:0 0 8px}
+.meta{font:400 13px var(--mono);color:var(--muted);margin:0 0 28px}
+section{padding:36px 0;border-top:1px solid var(--rule)}
+section .sub{color:var(--muted);max-width:64ch;margin:0 0 22px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:24px 0 8px}
+.tile{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.tile .k{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tile .v{font:600 30px/1.2 var(--display);font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.tile .d{font-size:13px;color:var(--muted)}
+.up{color:var(--gain)} .down{color:var(--loss)}
+figure{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+svg text{font-family:var(--body);fill:var(--ink)}
+svg .mut{fill:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+.slider{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:18px}
+.slider label{display:flex;justify-content:space-between;font-weight:500;gap:12px;flex-wrap:wrap}
+.slider output{font:500 16px var(--mono);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;margin:12px 0 16px;accent-color:var(--sea)}
+.rowline{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.rowline b{font-weight:600}
+.pill{display:inline-block;font:500 12px var(--mono);padding:2px 8px;border-radius:99px;background:var(--sea-soft);color:var(--sea)}
+.pill.warn{background:var(--loss-soft);color:var(--loss)}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:1px solid var(--rule)}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--paper)}
+.tablewrap{overflow-x:auto}
+.method ol{padding-left:20px;margin:0}
+.method li{margin-bottom:8px;max-width:66ch}
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.proof .tile .v{font-size:26px}
+.cta{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--sea);border-radius:6px;padding:20px 22px}
+footer{padding:28px 0 56px;color:var(--muted);font-size:13px;border-top:1px solid var(--rule)}
+footer p{max-width:70ch;margin:0 0 8px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="name">Andrea Dugarte <span>AI analyst, applying to DP World</span></div>
+  <nav aria-label="Sections"><a href="#finding">Finding</a><a href="#try">Test it</a><a href="#map">Where AI helps</a><a href="#check">Accuracy check</a><a href="#work">Other work</a></nav>
+</div></header>
+
+<main class="wrap">
+  <h1>DP World grew revenue 13.1% in H1 2026 and earned US$170m less EBITDA. Here is where the money went.</h1>
+  <p class="lede">I took the company's own H1 2026 results release, rebuilt the numbers in a spreadsheet, split the EBITDA change into a revenue effect and a margin effect, and mapped where AI could take routine reporting work off the Finance, Legal, Commercial, Operations and Business Development teams.</p>
+  <p class="meta">Source: DP World H1 2026 results release, 13 Aug 2026. All figures US$ m unless stated. Prepared by Andrea Dugarte, 8 Nov 2026.</p>
+
+  <div class="tiles" aria-label="Headline figures">
+    <div class="tile"><div class="k">Revenue</div><div class="v">12,715</div><div class="d"><span class="up">+13.1%</span> vs 11,244 in H1 2025</div></div>
+    <div class="tile"><div class="k">Adjusted EBITDA</div><div class="v">2,863</div><div class="d"><span class="down">-5.6%</span> vs 3,033 in H1 2025</div></div>
+    <div class="tile"><div class="k">EBITDA margin</div><div class="v">22.5%</div><div class="d"><span class="down">-4.5 pts</span> from 27.0%</div></div>
+    <div class="tile"><div class="k">Gross throughput</div><div class="v">42.8m TEU</div><div class="d"><span class="down">-5.7%</span>; excluding Jebel Ali <span class="up">+5.4%</span></div></div>
+  </div>
+
+  <section id="finding">
+    <h2>The finding</h2>
+    <p class="sub">Revenue growth alone would have added about US$397m of EBITDA. A lower margin on this year's revenue took away about US$567m. Net: down US$170m.</p>
+    <div class="two">
+      <figure>
+        <svg id="bridge" viewBox="0 0 420 300" role="img" aria-label="EBITDA bridge from H1 2025 to H1 2026"></svg>
+        <figcaption>Adjusted EBITDA bridge, H1 2025 to H1 2026 (US$ m). Revenue effect = change in revenue x H1 2025 margin. Margin effect = H1 2026 revenue x change in margin. The two add up to the reported figure with a check cell equal to zero.</figcaption>
+      </figure>
+      <figure>
+        <svg id="periods" viewBox="0 0 420 300" role="img" aria-label="Revenue and adjusted EBITDA by period"></svg>
+        <figcaption>Revenue and adjusted EBITDA by period (US$ m). Published as a <a href="https://public.tableau.com/app/profile/andrea.dugarte/viz/DPWorldH12026Results/Hoja1">Tableau Public dashboard</a>.</figcaption>
+      </figure>
+    </div>
+    <p class="sub" style="margin-top:18px"><span class="pill warn">Hypothesis, not a finding</span> The release does not split margin by terminal, so I cannot say why the margin fell. Two explanations fit the numbers and are worth testing: volume lost at a high-margin terminal (Jebel Ali throughput fell while the rest of the network grew), or faster growth in lower-margin logistics. Segment figures from a secondary source show Middle East and Africa EBITDA down 12.3% and logistics margin falling from 13.6% to 11.6%. I would check those against DP World's own presentation before relying on them.</p>
+  </section>
+
+  <section id="try">
+    <h2>Test the margin yourself</h2>
+    <p class="sub">Move the slider to see what H1 2026 adjusted EBITDA would have been at a different margin on the same US$12,715m of revenue.</p>
+    <div class="slider">
+      <label for="m"><span>EBITDA margin on H1 2026 revenue</span><output id="mo" for="m">22.5%</output></label>
+      <input type="range" id="m" min="18" max="30" step="0.01" value="22.52">
+      <div class="rowline"><span>Adjusted EBITDA at this margin</span><b id="e1">2,863</b></div>
+      <div class="rowline"><span>Versus reported H1 2026 (2,863)</span><b id="e2">0</b></div>
+      <div class="rowline"><span>Versus H1 2025 (3,033)</span><b id="e3">-170</b></div>
+      <div class="rowline"><span>Margin needed to match H1 2025 EBITDA</span><b id="e4">23.9%</b></div>
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>Where AI could help, team by team</h2>
+    <p class="sub">Each row is a hypothesis to test with the team. No time or cost savings are claimed until a pilot measures them.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Team</th><th>Task</th><th>Where AI could help</th><th>How I would test it</th><th>What I would measure</th></tr></thead>
+      <tbody>
+        <tr><td><b>Finance</b></td><td>Results commentary and financial reporting</td><td>Draft the variance commentary from the release and flag lines that moved past a threshold</td><td>Run on two past quarters and compare with the version a person wrote</td><td>Share of figures that match the source; minutes to a reviewable draft</td></tr>
+        <tr><td><b>Legal</b></td><td>Document review</td><td>First-pass extraction of dates, parties, renewal and termination terms, each linked to its clause</td><td>Pilot on 20 contracts a lawyer already reviewed</td><td>Items missed or wrong; review time per contract</td></tr>
+        <tr><td><b>Commercial</b></td><td>Commercial data analysis</td><td>Turn volume and customer data into a monthly one-page view of trends and exceptions</td><td>Rebuild one existing monthly report automatically and compare</td><td>Numbers that differ from the current report; hours per month</td></tr>
+        <tr><td><b>Operations</b></td><td>Operational reporting</td><td>Summarise operating logs and surface the three largest deviations from plan</td><td>Shadow the current report for four weeks</td><td>Deviations flagged that the team agrees were real</td></tr>
+        <tr><td><b>Business Development</b></td><td>Market and counterparty research</td><td>Standard briefing from public sources, each claim with a link</td><td>Brief three past opportunities and compare with what the team prepared</td><td>Claims that fail a source check; time to first brief</td></tr>
+      </tbody>
+    </table></div>
+    <p class="sub" style="margin-top:14px">One shared log tracks every pilot: task, time before, time after, errors found, decision. That log is how time saved and accuracy get reported to senior stakeholders.</p>
+  </section>
+
+  <section id="check" class="method">
+    <h2>How I checked my own numbers</h2>
+    <p class="sub">An AI summary is only useful if every figure can be traced. So I built the checking step first.</p>
+    <div class="proof">
+      <div class="tile"><div class="k">Blind test</div><div class="v">28 of 28</div><div class="d">figures correct against the source or an independent recalculation (18 of 18 reported, 10 of 10 derived)</div></div>
+      <div class="tile"><div class="k">Negative control</div><div class="v">Caught</div><div class="d">when I changed one figure on purpose, the check flagged it (27 of 28)</div></div>
+    </div>
+    <ol style="margin-top:18px">
+      <li>A Claude workflow turns the results release into a variance brief with every figure quoted.</li>
+      <li>A separate agent that saw only the official release, not my notes, wrote its own brief. This keeps my own extraction from grading itself.</li>
+      <li>A script checks each reported figure against the source text and recomputes each derived figure (growth rates, margins) on its own.</li>
+      <li>The altered-figure test confirms the script catches an error.</li>
+    </ol>
+    <p class="sub" style="margin-top:12px">I have not measured time saved, because there is no manual baseline yet. That is the first thing a pilot at DP World would set up.</p>
+  </section>
+
+  <section id="work">
+    <h2>Other work with numbers</h2>
+    <div class="proof">
+      <div class="tile"><div class="k">Paperplane, Instagram</div><div class="v">10 of 21</div><div class="d">published carousels began as my ideas. I built an AI workflow that turns each idea into a full brief and sends a daily approval list.</div></div>
+      <div class="tile"><div class="k">Red del Vino, Instagram</div><div class="v">+171%</div><div class="d">views, 40,900 to 110,950 in a month, with 52.8% from non-followers. I also built the cooperative's online shop with Claude Code.</div></div>
+      <div class="tile"><div class="k">EVAA Media, RedNote</div><div class="v">1st of 4</div><div class="d">interns, with 3x the followers of the runner-up and impressions up 1,164% to 40.1K in one 30-day period.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta">
+      <h2>What I would do in the first four weeks</h2>
+      <p style="margin:6px 0 0;max-width:64ch">Week 1: sit with one team and list their repeating reports. Week 2: pick the one with the clearest source data and build the draft-and-check workflow. Week 3: run it next to the current process and log the errors. Week 4: show the log to the vertical's leads and decide what to keep.</p>
+      <p style="margin:14px 0 0"><a href="mailto:andrea.dugarte_bmt2029@tetr.com">andrea.dugarte_bmt2029@tetr.com</a> (Shanghai, UTC+8, I can work on Dubai hours).</p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p>Data: DP World H1 2026 results release (13 Aug 2026) and H1 2025 and full-year comparatives from DP World's published results. Segment figures are from a secondary source and are marked as unverified here.</p>
+  <p>I am not affiliated with DP World. This is an independent analysis of public information.</p>
+</div></footer>
+
+<script>
+(function(){
+  var fmt=function(n){return Math.round(n).toLocaleString('en-US')};
+  var css=getComputedStyle(document.documentElement);
+  function tok(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  var rev25=11244,rev26=12715,e25=3033,e26=2863;
+  var m25=e25/rev25,m26=e26/rev26;
+  var revEff=(rev26-rev25)*m25, marEff=rev26*(m26-m25);
+
+  function bridge(){
+    var s=document.getElementById('bridge');var W=420,H=300,top=30,bot=250,min=2000,max=3600;
+    var y=function(v){return bot-(v-min)/(max-min)*(bot-top)};
+    var steps=[
+      {l:'H1 2025',a:min,b:e25,c:tok('--sea'),t:fmt(e25)},
+      {l:'Revenue growth',a:e25,b:e25+revEff,c:tok('--gain'),t:'+'+fmt(revEff)},
+      {l:'Lower margin',a:e25+revEff,b:e25+revEff+marEff,c:tok('--loss'),t:fmt(marEff).replace('-','-')},
+      {l:'H1 2026',a:min,b:e26,c:tok('--sea'),t:fmt(e26)}
+    ];
+    var h='';
+    steps.forEach(function(p,i){
+      var x=30+i*98,w=64,hi=Math.max(p.a,p.b),lo=Math.min(p.a,p.b);
+      h+='<rect x="'+x+'" y="'+y(hi)+'" width="'+w+'" height="'+(y(lo)-y(hi))+'" fill="'+p.c+'"/>';
+      h+='<text x="'+(x+w/2)+'" y="'+(y(hi)-6)+'" text-anchor="middle" font-size="13" font-weight="600">'+p.t+'</text>';
+      h+='<text x="'+(x+w/2)+'" y="272" text-anchor="middle" font-size="11" class="mut">'+p.l+'</text>';
+    });
+    h+='<line x1="20" x2="410" y1="'+bot+'" y2="'+bot+'" stroke="'+tok('--rule')+'"/>';
+    h+='<text x="20" y="16" font-size="11" class="mut">Axis starts at 2,000</text>';
+    s.innerHTML=h;
+  }
+  function periods(){
+    var s=document.getElementById('periods');var W=420,top=30,bot=250,max=26000;
+    var y=function(v){return bot-v/max*(bot-top)};
+    var d=[['FY2024',20023,5450],['FY2025',24422,6430],['H1 2025',11244,3033],['H1 2026',12715,2863]];
+    var h='';
+    d.forEach(function(p,i){
+      var x=26+i*98;
+      h+='<rect x="'+x+'" y="'+y(p[1])+'" width="32" height="'+(bot-y(p[1]))+'" fill="'+tok('--sea')+'"/>';
+      h+='<rect x="'+(x+34)+'" y="'+y(p[2])+'" width="32" height="'+(bot-y(p[2]))+'" fill="'+tok('--loss')+'"/>';
+      h+='<text x="'+(x+16)+'" y="'+(y(p[1])-5)+'" text-anchor="middle" font-size="10" font-weight="600">'+fmt(p[1])+'</text>';
+      h+='<text x="'+(x+50)+'" y="'+(y(p[2])-5)+'" text-anchor="middle" font-size="10" font-weight="600">'+fmt(p[2])+'</text>';
+      h+='<text x="'+(x+33)+'" y="272" text-anchor="middle" font-size="11" class="mut">'+p[0]+'</text>';
+    });
+    h+='<line x1="16" x2="410" y1="'+bot+'" y2="'+bot+'" stroke="'+tok('--rule')+'"/>';
+    h+='<rect x="26" y="8" width="10" height="10" fill="'+tok('--sea')+'"/><text x="40" y="17" font-size="11">Revenue</text>';
+    h+='<rect x="110" y="8" width="10" height="10" fill="'+tok('--loss')+'"/><text x="124" y="17" font-size="11">Adjusted EBITDA</text>';
+    s.innerHTML=h;
+  }
+  function draw(){bridge();periods()}
+  draw();
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  if(mq.addEventListener)mq.addEventListener('change',draw);
+  new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+  var m=document.getElementById('m');
+  function calc(){
+    var v=parseFloat(m.value)/100,e=rev26*v;
+    document.getElementById('mo').textContent=(v*100).toFixed(1)+'%';
+    document.getElementById('e1').textContent=fmt(e);
+    var d2=Math.round(e)-e26,d3=Math.round(e)-e25;
+    document.getElementById('e2').textContent=(d2>0?'+':'')+fmt(d2);
+    document.getElementById('e3').textContent=(d3>0?'+':'')+fmt(d3);
+    document.getElementById('e4').textContent=(e25/rev26*100).toFixed(1)+'%';
+  }
+  m.addEventListener('input',calc);calc();
+})();
+</script>
+</body>
+</html>
