@@ -1,0 +1,25 @@
+# Andrea Dugarte
+
+> Student at TETR College of Business (BMT 2029), based in Shanghai. Does research and analysis with AI and builds the tools she needs for it. This site is her application for the AI Analyst Intern role in DP World's CEO and Group CFO Office (Maritime Solutions and Marine Services).
+
+## Main page
+- [Portfolio](https://andreadugarte.com/): a globe tour of her work in Chile, China, Hong Kong, India and the UAE, a rebuild of DP World's H1 2026 results, an AI-written brief checked against the release, and a toy container-terminal model (not DP World data).
+
+## Work (what she did and how AI was used)
+- Red del Vino (Chile), Digital Growth and E-commerce Intern: turned an information site for a Chilean wine network into a multilingual online shop, built with Claude Code.
+- EVAA Media (China), Influencer Business Intern: built a RedNote account from zero with AI-assisted research.
+- TETR (China), Content Creator (IG) Intern: spokesperson and explainer videos.
+- InfluChina (Hong Kong agency, remote from Shanghai), Remote marketing intern: sales outreach and Google Ads work.
+- Paperplane (India), Brand Marketing and Instagram Intern: built an AI agent that turns content ideas into briefs.
+- One Off Hotels (India), content strategy for the Varanasi series.
+- Match It (India), co-founder of a D2C matcha brand, one of six co-founders.
+- Luluah Beauty (UAE), product research and e-commerce support.
+- Partnerships (Dubai), business development: cold outreach to local brands.
+
+## Contact
+- Email: andrea.dugarte_bmt2029@tetr.com
+- Location: Shanghai, UTC+8, available on Dubai hours.
+- Tableau Public: https://public.tableau.com/app/profile/andrea.dugarte
+
+## Notes
+- Independent analysis of public information. Not affiliated with DP World.
