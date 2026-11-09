@@ -3,18 +3,24 @@
 > Business student at TETR College of Business (BMT 2029). AI agents, e-commerce, data and content. Contact: andrea.dugarte_bmt2029@tetr.com
 
 ## Work
-- Red del Vino (Digital growth and e-commerce): Turned an information site for a wine network into a multilingual online shop, as the only person on it. 4 to 24 wines in 4 languages, live at reddelvino.com. Instagram interactions went from 704 to 4,599 in a month (+553%), net new followers from +13 to +576, and interactions per view from 1.7% to 4.1%.
-- EVAA Media (Influencer business, RedNote): Built a RedNote account from zero and reported on it every month. 3x the followers and 4x the likes and saves of the runner-up in my cohort.
-- TETR (Content creation, Instagram): Spokesperson and explainer videos for TETR's official channels. 10K+ views on spokesperson videos.
-- InfluChina (AI operations): Set up and oversaw AI agents for lead handling and proposals at an agency that sells influencer marketing to foreign brands entering China. Also planned client WeChat content and built Google Ads creatives. Agents for leads and proposals, plus an 8-week LinkedIn content plan.
-- Paperplane (Brand marketing and Instagram): Brand marketing and Instagram for a family-travel brand, with an AI agent I built. Published carousels began as my ideas.
-- One Off Hotels (Content strategy): Conceived a Varanasi series, wrote the scripts and ran the on-camera interviews. On camera for the Delhi hotel. Featured on One Off's website and Instagram.
-- Match It (Co-founder, D2C matcha brand): Led the website, the supplier relationship and in-person sales, one of six co-founders. Top salesperson at the live pop-up. The launch reel earned 3,500+ likes, the #1 video in the cohort.
+- Red del Vino (E-commerce and brand): Turned an information-only site for a fair-trade wine cooperative into a live 4-language online store, as a one-person team. Catalogue from 4 to 24 wines at reddelvino.com. Instagram interactions went from 704 to 4,599 in a month (+553%), net new followers from +13 to +576, interactions per view from 1.7% to 4.1%.
+- InfluChina (AI operations): Put AI agents on lead handling and proposal drafting inside the team Slack and Monday, at an agency that sells influencer marketing to brands entering China. Also delivered client WeChat content plans, Google Ads creatives and an 8-week LinkedIn plan for the CEO account.
+- Paperplane (Brand marketing and Instagram): Built an agent that turns raw content ideas into full briefs, and benchmarked about 280 travel ads and reels. 35 ideas pitched from a board of 112, 10 published. Agent briefs for about 80 ideas. In the benchmark, 14% of comments asked for price, location or how to book.
+- EVAA Media (RedNote growth): Grew a RedNote account from zero and changed the content plan around what the numbers showed. 3x the followers and 4x the likes and saves of the next account in my cohort.
+- Match It (Co-founder, D2C matcha brand): One of six co-founders. Built the website, brought stock from supplier to market and sold face to face at the live launch. Top salesperson at the live pop-up. The launch reel earned 3,500+ likes, the #1 video in the cohort.
+- Brand partnerships (Business development): Cold outreach to local brands in Dubai. 4 partnerships won by cold outreach: OO La Labs, Deep Dive Dubai, Kompay, Chocoberry Boutique.
+- TETR (Admissions and content): Admitted from the top 1% of 10,000+ global applicants, with a merit scholarship. On camera as spokesperson for the official TETR channels. Spokesperson and explainer videos for TETR channels, including the Masters program account.
+- One Off Hotels (Content strategy): Conceived a Varanasi series, wrote the scripts and ran the on-camera interviews. On camera for The South Delhi Edition, its 13-room design hotel in Greater Kailash II. Featured on the One Off Hotels website and Instagram.
 - Luluah Beauty (Product research and e-commerce): Researched beauty products for the website and judged their commercial potential. Contributed to product selection.
-- Brand partnerships (Business development): Cold outreach to local brands. 4 partnerships secured myself: OO La Labs, Deep Dive Dubai, Kompay, Chocoberry Boutique.
 
 ## Skills
 AI tools and agents (Claude, Claude Code, ChatGPT), workflow automation, Excel with Pivot Tables, Tableau, data analysis and reporting.
 
 ## Languages
 Spanish (native), English (C2), Italian (C2, coursework), German (A1).
+
+## DP World H1 2026 results, rebuilt
+- Page: https://andreadugarte.com/dpworld/ . An independent analysis of DP World's H1 2026 results release (13 Aug 2026), made for the AI Analyst role in the CEO and Group CFO Office, Maritime Solutions. Not part of my work history, and not affiliated with DP World.
+- Finding: revenue up 13.1% to US$12,715m, adjusted EBITDA down 5.6% to US$2,863m (US$170m less than H1 2025). Revenue growth alone would have added about US$397m; a lower margin (22.5% against 27.0%) took away about US$567m.
+- Jebel Ali: gross throughput fell from 7.8m to 3.1m TEU (-59.5%, my subtraction from the release table) while the rest of the network grew 5.4%. The release does not give Jebel Ali's own EBITDA, so the cause of the margin drop is a hypothesis to test.
+- Includes an AI-written brief whose figures were checked by a separate script (28 of 28 matched the release), a map of where AI could help each team, and a toy container-terminal model labelled as not DP World data.
