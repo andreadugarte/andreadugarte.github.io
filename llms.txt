@@ -1,25 +1,20 @@
 # Andrea Dugarte
 
-> Student at TETR College of Business (BMT 2029), based in Shanghai. Does research and analysis with AI and builds the tools she needs for it. This site is her application for the AI Analyst Intern role in DP World's CEO and Group CFO Office (Maritime Solutions and Marine Services).
+> Business student at TETR College of Business (BMT 2029). AI agents, e-commerce, data and content. Contact: andrea.dugarte_bmt2029@tetr.com
 
-## Main page
-- [Portfolio](https://andreadugarte.com/): a globe tour of her work in Chile, China, Hong Kong, India and the UAE, a rebuild of DP World's H1 2026 results, an AI-written brief checked against the release, and a toy container-terminal model (not DP World data).
+## Work
+- Red del Vino (Digital growth and e-commerce): Turned an information site for a wine network into a multilingual online shop, as the only person on it. 4 to 24 wines in 4 languages, live at reddelvino.com. Instagram interactions went from 704 to 4,599 in a month (+553%), net new followers from +13 to +576, and interactions per view from 1.7% to 4.1%.
+- EVAA Media (Influencer business, RedNote): Built a RedNote account from zero and reported on it every month. 3x the followers and 4x the likes and saves of the runner-up in my cohort.
+- TETR (Content creation, Instagram): Spokesperson and explainer videos for TETR's official channels. 10K+ views on spokesperson videos.
+- InfluChina (AI operations): Set up and oversaw AI agents for lead handling and proposals at an agency that sells influencer marketing to foreign brands entering China. Also planned client WeChat content and built Google Ads creatives. Agents for leads and proposals, plus an 8-week LinkedIn content plan.
+- Paperplane (Brand marketing and Instagram): Brand marketing and Instagram for a family-travel brand, with an AI agent I built. Published carousels began as my ideas.
+- One Off Hotels (Content strategy): Conceived a Varanasi series, wrote the scripts and ran the on-camera interviews. On camera for the Delhi hotel. Featured on One Off's website and Instagram.
+- Match It (Co-founder, D2C matcha brand): Led the website, the supplier relationship and in-person sales, one of six co-founders. Top salesperson at the live pop-up. The launch reel earned 3,500+ likes, the #1 video in the cohort.
+- Luluah Beauty (Product research and e-commerce): Researched beauty products for the website and judged their commercial potential. Contributed to product selection.
+- Brand partnerships (Business development): Cold outreach to local brands. 4 partnerships secured myself: OO La Labs, Deep Dive Dubai, Kompay, Chocoberry Boutique.
 
-## Work (what she did and how AI was used)
-- Red del Vino (Chile), Digital Growth and E-commerce Intern: turned an information site for a Chilean wine network into a multilingual online shop, built with Claude Code.
-- EVAA Media (China), Influencer Business Intern: built a RedNote account from zero with AI-assisted research.
-- TETR (China), Content Creator (IG) Intern: spokesperson and explainer videos.
-- InfluChina (Hong Kong agency, remote from Shanghai), Remote marketing intern: sales outreach and Google Ads work.
-- Paperplane (India), Brand Marketing and Instagram Intern: built an AI agent that turns content ideas into briefs.
-- One Off Hotels (India), content strategy for the Varanasi series.
-- Match It (India), co-founder of a D2C matcha brand, one of six co-founders.
-- Luluah Beauty (UAE), product research and e-commerce support.
-- Partnerships (Dubai), business development: cold outreach to local brands.
+## Skills
+AI tools and agents (Claude, Claude Code, ChatGPT), workflow automation, Excel with Pivot Tables, Tableau, data analysis and reporting.
 
-## Contact
-- Email: andrea.dugarte_bmt2029@tetr.com
-- Location: Shanghai, UTC+8, available on Dubai hours.
-- Tableau Public: https://public.tableau.com/app/profile/andrea.dugarte
-
-## Notes
-- Independent analysis of public information. Not affiliated with DP World.
+## Languages
+Spanish (native), English (C2), Italian (C2, coursework), German (A1).
